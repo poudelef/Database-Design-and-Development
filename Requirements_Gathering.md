@@ -1,11 +1,8 @@
 # Online E-Commerce Management System
 
----
-
 ## 1. Project Overview
 
 This individual project focuses on the design and development of a relational database system for an online e-commerce platform. The system will manage information related to customers, products, product categories, orders, payments, shipping, inventory, and product reviews.
-
 ---
 
 ## 2. Project Goals and Scope
