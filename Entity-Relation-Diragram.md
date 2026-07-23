@@ -4,7 +4,6 @@
 
 ### Strong Entities
 Strong entities have their own primary key and can exist independently.
-
 - **Customer**
 - **Category**
 - **Product**
@@ -14,9 +13,7 @@ Strong entities have their own primary key and can exist independently.
 - **Review**
 
 ### Weak (Associative) Entity
-Weak entities depend on other entities for their existence.
-
-- **OrderItem** *(Associative Entity)*  
+- **OrderItem**  
   - Resolves the many-to-many relationship between **Orders** and **Product**.
   - Depends on both **Orders** and **Product**.
 
@@ -24,7 +21,7 @@ Weak entities depend on other entities for their existence.
 
 # Entities and Attributes
 
-## Customer (Strong Entity)
+## Customer
 
 **Primary Key**
 - CustomerID
@@ -38,7 +35,7 @@ Weak entities depend on other entities for their existence.
 
 ---
 
-## Category (Strong Entity)
+## Category
 
 **Primary Key**
 - CategoryID
@@ -49,7 +46,7 @@ Weak entities depend on other entities for their existence.
 
 ---
 
-## Product (Strong Entity)
+## Product
 
 **Primary Key**
 - ProductID
@@ -65,7 +62,7 @@ Weak entities depend on other entities for their existence.
 
 ---
 
-## Orders (Strong Entity)
+## Orders
 
 **Primary Key**
 - OrderID
@@ -80,7 +77,7 @@ Weak entities depend on other entities for their existence.
 
 ---
 
-## OrderItem (Weak / Associative Entity)
+## OrderItem
 
 This entity resolves the many-to-many relationship between **Orders** and **Product**.
 
@@ -97,7 +94,7 @@ This entity resolves the many-to-many relationship between **Orders** and **Prod
 
 ---
 
-## Payment (Strong Entity)
+## Payment
 
 **Primary Key**
 - PaymentID
@@ -113,7 +110,7 @@ This entity resolves the many-to-many relationship between **Orders** and **Prod
 
 ---
 
-## Shipping (Strong Entity)
+## Shipping
 
 **Primary Key**
 - ShippingID
@@ -129,7 +126,7 @@ This entity resolves the many-to-many relationship between **Orders** and **Prod
 
 ---
 
-## Review (Strong Entity)
+## Review
 
 **Primary Key**
 - ReviewID
@@ -174,9 +171,16 @@ This entity resolves the many-to-many relationship between **Orders** and **Prod
 - One customer can submit multiple product reviews.
 - One product can receive reviews from multiple customers.
 
+--- 
 
+# Diagram
 
-# dbdiagram.io code: https://dbdiagram.io/d/6a623523c3a90dd98da22d1e
+<img width="1218" height="1058" alt="Untitled" src="https://github.com/user-attachments/assets/c5181983-c13d-4f1a-b189-12fae827c109" />
+
+--- 
+
+# dbdiagram.io code: 
+## https://dbdiagram.io/d/6a623523c3a90dd98da22d1e
 ```
 Table Customer {
   CustomerID int [pk, increment]
