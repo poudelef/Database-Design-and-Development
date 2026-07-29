@@ -16,12 +16,13 @@ CREATE TABLE IF NOT EXISTS Category(
 
 CREATE TABLE IF NOT EXISTS Product(
     ProductID INT PRIMARY KEY,
-    CategoryID INT,
     ProductName VARCHAR(50),
     Product_Description VARCHAR(150),
     Price REAL,
     StockQuantity INT,
+    CategoryID INT,
 
+    CONSTRAINT fk_category
     FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID)
 );
 
@@ -32,6 +33,7 @@ CREATE TABLE IF NOT EXISTS Orders(
     TotalAmount REAL,
     OrderStatus VARCHAR(50),
 
+    CONSTRAINT fk_CustomerID
     FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
 );
 
@@ -43,7 +45,9 @@ CREATE TABLE IF NOT EXISTS OrderItem(
     Quantity INT,
     UnitPrice REAL,
 
+    CONSTRAINT fk_OrderID
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+    CONSTRAINT fk_ProductID
     FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
 );
 
@@ -55,6 +59,7 @@ CREATE TABLE IF NOT EXISTS Payment(
     Amount REAL,
     PaymentStatus VARCHAR(50),
 
+    CONSTRAINT fk_OrderID
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
 );
 
@@ -66,6 +71,7 @@ CREATE TABLE IF NOT EXISTS Shipping(
     ShippingStatus VARCHAR(50),
     DeliveryDate DATE,
 
+    CONSTRAINT fk_OrderID
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
 );
 
@@ -77,7 +83,9 @@ CREATE TABLE IF NOT EXISTS Review(
     ReviewText VARCHAR(500),
     ReviewDate DATE,
 
+    CONSTRAINT fk_CustomerID
     FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID),
+    CONSTRAINT fk_ProductID
     FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
 );
 
