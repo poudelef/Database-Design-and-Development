@@ -127,56 +127,56 @@ VALUES
 -- ==========================
 -- Orders
 -- ==========================
-INSERT INTO Orders (OrderID, CustomerID, OrderDate, TotalAmount, OrderStatus)
-VALUES
-(1001, 1, '2026-06-01 10:30:00', 1029.98, 'Completed'),
-(1002, 2, '2026-06-03 14:15:00', 109.98, 'Shipped'),
-(1003, 3, '2026-06-05 09:45:00', 19.99, 'Pending'),
-(1004, 4, '2026-06-08 16:20:00', 79.99, 'Completed'),
-(1005, 5, '2026-06-10 11:00:00', 89.99, 'Processing');
+-- INSERT INTO Orders (OrderID, CustomerID, OrderDate, TotalAmount, OrderStatus)
+-- VALUES
+-- (1001, 1, '2026-06-01 10:30:00', 1029.98, 'Completed'),
+-- (1002, 2, '2026-06-03 14:15:00', 109.98, 'Shipped'),
+-- (1003, 3, '2026-06-05 09:45:00', 19.99, 'Pending'),
+-- (1004, 4, '2026-06-08 16:20:00', 79.99, 'Completed'),
+-- (1005, 5, '2026-06-10 11:00:00', 89.99, 'Processing');
 
 -- ==========================
 -- OrderItem
 -- ==========================
-INSERT INTO OrderItem (OrderItemID, OrderID, ProductID, Quantity, UnitPrice)
-VALUES
-(1, 1001, 101, 1, 999.99),
-(2, 1001, 102, 1, 29.99),
-(3, 1002, 103, 1, 89.99),
-(4, 1002, 102, 1, 19.99),
-(5, 1003, 104, 1, 19.99),
-(6, 1004, 105, 1, 79.99),
-(7, 1005, 103, 1, 89.99);
+-- INSERT INTO OrderItem (OrderItemID, OrderID, ProductID, Quantity, UnitPrice)
+-- VALUES
+-- (1, 1001, 101, 1, 999.99),
+-- (2, 1001, 102, 1, 29.99),
+-- (3, 1002, 103, 1, 89.99),
+-- (4, 1002, 102, 1, 19.99),
+-- (5, 1003, 104, 1, 19.99),
+-- (6, 1004, 105, 1, 79.99),
+-- (7, 1005, 103, 1, 89.99);
 
 -- ==========================
 -- Payment
 -- ==========================
-INSERT INTO Payment (PaymentID, OrderID, PaymentMethod, PaymentDate, Amount, PaymentStatus)
-VALUES
-(1, 1001, 'Credit Card', '2026-06-01 10:35:00', 1029.98, 'Paid'),
-(2, 1002, 'PayPal', '2026-06-03 14:20:00', 109.98, 'Paid'),
-(3, 1003, 'Debit Card', '2026-06-05 09:50:00', 19.99, 'Pending'),
-(4, 1004, 'Credit Card', '2026-06-08 16:25:00', 79.99, 'Paid'),
-(5, 1005, 'Apple Pay', '2026-06-10 11:05:00', 89.99, 'Processing');
+-- INSERT INTO Payment (PaymentID, OrderID, PaymentMethod, PaymentDate, Amount, PaymentStatus)
+-- VALUES
+-- (1, 1001, 'Credit Card', '2026-06-01 10:35:00', 1029.98, 'Paid'),
+-- (2, 1002, 'PayPal', '2026-06-03 14:20:00', 109.98, 'Paid'),
+-- (3, 1003, 'Debit Card', '2026-06-05 09:50:00', 19.99, 'Pending'),
+-- (4, 1004, 'Credit Card', '2026-06-08 16:25:00', 79.99, 'Paid'),
+-- (5, 1005, 'Apple Pay', '2026-06-10 11:05:00', 89.99, 'Processing');
 
 -- ==========================
 -- Shipping
 -- ==========================
-INSERT INTO Shipping (ShippingID, OrderID, ShippingAddress, TrackingNumber, ShippingStatus, DeliveryDate)
-VALUES
-(1, 1001, '123 Main St, Cincinnati, OH', 'TRK100001', 'Delivered', '2026-06-04'),
-(2, 1002, '456 Oak Ave, Columbus, OH', 'TRK100002', 'In Transit', NULL),
-(3, 1003, '789 Pine Rd, Dayton, OH', 'TRK100003', 'Preparing', NULL),
-(4, 1004, '321 Elm St, Toledo, OH', 'TRK100004', 'Delivered', '2026-06-11'),
-(5, 1005, '654 Maple Dr, Cleveland, OH', 'TRK100005', 'Processing', NULL);
+-- INSERT INTO Shipping (ShippingID, OrderID, ShippingAddress, TrackingNumber, ShippingStatus, DeliveryDate)
+-- VALUES
+-- (1, 1001, '123 Main St, Cincinnati, OH', 'TRK100001', 'Delivered', '2026-06-04'),
+-- (2, 1002, '456 Oak Ave, Columbus, OH', 'TRK100002', 'In Transit', NULL),
+-- (3, 1003, '789 Pine Rd, Dayton, OH', 'TRK100003', 'Preparing', NULL),
+-- (4, 1004, '321 Elm St, Toledo, OH', 'TRK100004', 'Delivered', '2026-06-11'),
+-- (5, 1005, '654 Maple Dr, Cleveland, OH', 'TRK100005', 'Processing', NULL);
 
--- ==========================
--- Review
--- ==========================
-INSERT INTO Review (ReviewID, CustomerID, ProductID, Rating, ReviewText, ReviewDate)
-VALUES
-(1, 1, 101, 5, 'Excellent laptop. Very fast and reliable.', '2026-06-10'),
-(2, 2, 103, 4, 'Very informative textbook.', '2026-06-12'),
-(3, 3, 104, 5, 'Comfortable and fits perfectly.', '2026-06-15'),
-(4, 4, 105, 4, 'Makes great coffee every morning.', '2026-06-18'),
-(5, 5, 102, 5, 'Mouse is responsive and easy to use.', '2026-06-20');
+-- -- ==========================
+-- -- Review
+-- -- ==========================
+-- INSERT INTO Review (ReviewID, CustomerID, ProductID, Rating, ReviewText, ReviewDate)
+-- VALUES
+-- (1, 1, 101, 5, 'Excellent laptop. Very fast and reliable.', '2026-06-10'),
+-- (2, 2, 103, 4, 'Very informative textbook.', '2026-06-12'),
+-- (3, 3, 104, 5, 'Comfortable and fits perfectly.', '2026-06-15'),
+-- (4, 4, 105, 4, 'Makes great coffee every morning.', '2026-06-18'),
+-- (5, 5, 102, 5, 'Mouse is responsive and easy to use.', '2026-06-20');
